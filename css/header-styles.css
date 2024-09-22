@@ -1,0 +1,144 @@
+/*================================ Main Header ==============================*/
+header.main-header {
+    position: relative;
+    /* aspect-ratio: calc(1920/(1080*(0.9))); */
+    height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    min-height: 750px;
+}
+
+.main-header-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.main-header-bg > video {
+    object-fit: cover;
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -10;
+}
+
+.main-header-content-wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, #35137e, #bd65df00);
+}
+
+.header-segment-overlay-wrapper {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.header-segment-overlay-img {
+    position: relative;
+    top: 5px;
+    width: 100%;
+}
+
+.main-header-content {
+    width: 66.67%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    z-index: 3;
+}
+
+.main-header-heading, .main-header-description {
+    text-align: center;
+    color: #ffffff;
+    font-family: var(--header-font);
+    z-index: 3;
+}
+
+.main-header-heading {
+    font-size: 72px;
+    line-height: 5rem;
+    padding-top: 90px;
+    margin: 0px;
+}
+.main-header-heading h1 {
+    margin-bottom: 0px;
+    color: inherit !important;
+}
+.main-header-description {
+    font-size: 1.2rem;
+    line-height: 27px;
+    width: 75%;
+    margin: auto;
+}
+.main-header-button-wrapper {z-index: 3;}
+.main-header-button {
+    margin: auto;
+    display: block;
+}
+
+.header-robot-container {
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
+.header-robot-image {
+    position: relative;
+    width: 330px;
+    left: calc(90vw - 330px);
+    animation: robo-fly 1.8s infinite ease-in-out alternate;
+}
+@keyframes robo-fly {
+    from {bottom: 18px}
+    to {bottom: 0px;}
+}
+
+.header-robot-toggle-button {
+    border-radius: 100%;
+    text-align: center;
+    border: 4px #ffffff solid;
+    aspect-ratio: 1;
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    padding: 4px;
+    cursor: pointer;
+    bottom: 30%;
+    background-color: transparent;
+}
+.robo-toggle-icon {
+    color: #ffffff;
+    display: block;
+    aspect-ratio: 1;
+    font-size: 15px;
+}
+.play-icon {display: none;}
+
+/*================================ Code for Responsive Behaviour ==============================*/
+
+@media (max-width: 1024px) {
+    header {height: 600px}
+    .main-header-content {
+        width: calc(100% - 24px);
+        padding: 0px 12px;
+    }
+    .main-header-heading {
+        font-size: 39px;
+        line-height: 39px;
+    }
+    .main-header-description {width: 100%;}
+}
+
+@media (max-width: 640px) {
+    .header-robot-image {
+        width: 200px;
+        transform: translateY(54px);
+        margin: auto;
+        left: calc(50% - 100px);
+    }
+    header.main-header {overflow: visible;}
+}

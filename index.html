@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- Metadata for the website, for third party uses -->
+        <meta name="description" content="This project is a parody of Salesforce' landing page, created from scratch with full responsiveness to adapt to mobile devices. It was developed as an evaluative assignment. Please note that this website and the author have no affiliations with Salesforce, Inc., other than the parody of the landing/home page." />
+        <meta name="author" content="Ansh Malviya" />
+        <!-- Metadata to scale the webside according to the width of the device to make it 'viewable' on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Tab name and icon -->
+        <title>Salesforce: The Customer Company | Salesforce India (Parody Webpage)</title> 
+        <link rel="icon" type="image/png" href="./assets/icons/" />
+        <!-- Links to external files and links -->
+        <link href="./css/styles.css" rel="stylesheet" />
+        <link href="./css/navbar-styles.css" rel="stylesheet" />
+        <link href="./css/header-styles.css" rel="stylesheet" />
+        <link href="./css/main-body-styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.6.0/js/all.js" crossorigin="anonymous"></script> <!-- Library for icons -->
+    </head>
+    <body>
+        <!--=============================== Top header/nav bar =============================-->
+        <header class="top-header">
+            <nav>
+                <!-- Redirectional nav links positioned to the left -->
+                <div class="navlinks-container">
+                    <!-- Main logo: Home page link -->
+                    <div class="navlink-wrapper" id="nav-menu">
+                        <div class="nav-button vertically-centered-elem">
+                            <a class="vertically-centered-elem"><i class="fa-solid fa-bars navlink-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="navlink-wrapper">
+                        <a href="." class="navlink vertically-centered-elem">
+                            <img class="navlink-image" src="./assets/images/salesforce-with-text-logo.svg">
+                            <img class="navlink-image" src="./assets/images/salesforce-no-text-logo.svg">
+                        </a>
+                    </div>
+                    <!-- Other navlinks -->
+                    <div class="navlink-wrapper large-width-links">
+                        <a class="navlink vertically-centered-elem">Products</a>
+                    </div>
+                    <div class="navlink-wrapper large-width-links">
+                        <a class="navlink vertically-centered-elem">Industries</a>
+                    </div>
+                    <div class="navlink-wrapper large-width-links">
+                        <a class="navlink vertically-centered-elem">Customers</a>
+                    </div>
+                    <div class="navlink-wrapper large-width-links">
+                        <a class="navlink vertically-centered-elem">Learning</a>
+                    </div>
+                    <div class="navlink-wrapper large-width-links">
+                        <a class="navlink vertically-centered-elem">Support</a>
+                    </div>
+                    <div class="navlink-wrapper large-width-links">
+                        <a class="navlink vertically-centered-elem">Company</a>
+                    </div>
+                    <div class="navlink-wrapper large-width-links">
+                        <a class="navlink vertically-centered-elem">Salesforce+</a>
+                    </div>
+                </div>
+                <!-- Other features nav links positioned to the right -->
+                <div class="navlinks-container">
+                    <!-- Contact Redirect and call details -->
+                    <div class="navlink-wrapper large-width-links">
+                        <div class="navlink-contact-wrapper vertically-centered-elem">
+                            <div>
+                                <a style="text-decoration: underline;">Contact Us</a>
+                            </div>
+                            <div>1800-420-7332</div>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                     <div class="navlink-wrapper">
+                        <div class="nav-button vertically-centered-elem">
+                            <a class="vertically-centered-elem"><i class="fa-solid fa-magnifying-glass navlink-icon"></i></a>
+                        </div>
+                     </div>
+                     <div class="navlink-wrapper large-width-links">
+                        <div class="nav-button vertically-centered-elem">
+                            <a class="vertically-centered-elem"><i class="fa-solid fa-globe"></i></a>
+                        </div>
+                     </div>
+                     <div class="navlink-wrapper">
+                        <div class="nav-button-login vertically-centered-elem">
+                            <a href=""><i class="fa-solid fa-user navlink-icon"></i> <span class="navlink-label">Login</span></a>
+                        </div>
+                     </div>
+                     <div class="navlink-wrapper">
+                        <div class="nav-button-trial vertically-centered-elem">
+                            <span>Try for Free</span>
+                        </div>
+                     </div>
+                </div>
+            </nav>
+        </header>
+        <!--================================================================================-->
+        <!--=============================== Main Body (Scrollable) =============================-->
+        <div class="main-body">
+            <!--=============================== Dreamforce Advertisement =============================-->
+            <div class="dforce-ad-strip">
+                <div class="dforce-ad-wrapper">
+                    <div class="dforce-logo-wrapper">
+                        <img class="dforce-ad-logo vertically-centered-elem" src="./assets/images/df-logo-text.png">
+                    </div>
+                    <div class="dforce-ad-text">
+                        <span class="vertically-centered-elem">Get ready to stream bold innovation at Dreamforce.</span>
+                    </div>
+                    <div class="dforce-ad-link">
+                        <a class="vertically-centered-elem dforce-link">Register for free</a>
+                    </div>
+                </div>
+            </div>
+            <!--======================================================================================-->
+            <!--=============================== Main Header =============================-->
+            <header class="main-header">
+                <!--=============================== Background Video =============================-->
+                <div class="main-header-bg">   
+                    <video class="vertically-centered-elem" autoplay loop muted> <!-- Video needs to bbe muted in order to be allowed by the browser to be played on load without the need of user interaction (this background video does not have any audio anyway) -->
+                        <source src="./assets/videos/3D-letter-bg.mp4">
+                    </video>
+                </div>
+                <!--============================== Header Content =============================-->
+                <div class="main-header-content-wrapper">
+                    <div class="main-header-content">
+                        <div><h1 class="main-header-heading">Humans with Agents, <div style="color: #d9aaff;">driving success together.</div></h1></div>
+                        <div class="main-header-description">Boost productivity with AI agents that assist in everyday tasks and take action. <span style="color: #d9aaff;">Seamlessly transfer from proactive AI agents to humans.</span> Even build custom agents fast with low-code and natural language tools.</div>
+                        <div class="main-header-button-wrapper">
+                            <button class="main-header-button section-button-hollow">Discover Agentforce</button>
+                        </div>
+                    </div>
+                </div>
+                <!--=============================== Robot Image =============================-->
+                <div class="header-robot-container">
+                    <img class="header-robot-image" src="./assets/images/astroagentforce-fly.png">
+                    <button class="header-robot-toggle-button" onclick="toggleRoboAnimation()">
+                        <span class="pause-icon vertically-centered-elem robo-toggle-icon">
+                            <i class="fa-solid fa-pause robo-toggle-icon"></i>
+                        </span>
+                        <span class="play-icon vertically-centered-elem robo-toggle-icon">
+                            <i class="fa-solid fa-play robo-toggle-icon"></i>
+                        </span>
+                    </button>
+                </div>
+                <!--=============================== Bottom Segment Image =============================-->
+                <div class="header-segment-overlay-wrapper">
+                    <img class="header-segment-overlay-img" src="./assets/images/segment_background.svg">
+                </div>
+            </header>
+            <!--=========================================================================-->
+            <!--=============================== Salesforce Products Section =============================-->
+            <div class="main-body-section footer-image-container footer-image-container-1">
+                <h2 class="heading">Learn what Salesforce products can do for you.</h2>
+                <div class="sforce-products-card-container">
+                    <div class="sforce-products-card">
+                        <div class="sforce-products-card-image-wrapper">
+                            <a href="">
+                                <img class="sforce-products-card-image" src="./assets/images/product-card-img (1).jpg">
+                            </a>
+                        </div>
+                        <div class="sforce-products-card-text">
+                            <h3 class="sforce-products-card-heading">Small Business</h3>
+                            <div class="sforce-products-card-description">Sales, service, and email outreach tools in a single app.</div>
+                        </div>
+                        <div class="sforce-products-card-link-wrapper">
+                            <a href="">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="sforce-products-card">
+                        <div class="sforce-products-card-image-wrapper">
+                            <a href="">
+                                <img class="sforce-products-card-image" src="./assets/images/product-card-img (2).jpg">
+                            </a>
+                        </div>
+                        <div class="sforce-products-card-text">
+                            <h3 class="sforce-products-card-heading">Sales Cloud</h3>
+                            <div class="sforce-products-card-description">Close more deals and speed up growth with the #1 CRM.</div>
+                        </div>
+                        <div class="sforce-products-card-link-wrapper">
+                            <a href="">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="sforce-products-card">
+                        <div class="sforce-products-card-image-wrapper">
+                            <a href="">
+                                <img class="sforce-products-card-image" src="./assets/images/product-card-img (3).jpg">
+                            </a>
+                        </div>
+                        <div class="sforce-products-card-text">
+                            <h3 class="sforce-products-card-heading">Service Cloud</h3>
+                            <div class="sforce-products-card-description">Make customers hapy faster and build loyalty with Service Cloud.</div>
+                        </div>
+                        <div class="sforce-products-card-link-wrapper">
+                            <a href="">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="sforce-products-card">
+                        <div class="sforce-products-card-image-wrapper">
+                            <a href="">
+                                <img class="sforce-products-card-image" src="./assets/images/product-card-img (4).jpg">
+                            </a>
+                        </div>
+                        <div class="sforce-products-card-text">
+                            <h3 class="sforce-products-card-heading">Marketing Cloud</h3>
+                            <div class="sforce-products-card-description">Build customer relationships for life and with data-first digital marketing.</div>
+                        </div>
+                        <div class="sforce-products-card-link-wrapper">
+                            <a href="">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <div class="section-footer-button-wrapper">
+                        <button class="section-button-hollow">View all our products</button>
+                    </div>
+                    <!-- <img class="section-footer-background-image" src="./assets/images/background_img-1.webp"> -->
+                </div>
+            </div>
+            <!--======================================================================-->
+            <!--=============================== Info Section 1 =============================-->
+            <div class="main-body-section">
+                <h1 class="heading">We bring companies and customers together</h1>
+                <p>Salesforce is the world’s most trusted customer relationship management (CRM) platform. We help your marketing, sales, commerce, service and IT teams work as one from anywhere — so you can keep your customers happy everywhere.</p>
+                <div class="section-footer">
+                    <div class="section-footer-button-wrapper">
+                        <button class="section-button-solid">Start free trial</button>
+                        <button class="section-button-hollow">Watch demos</button>
+                    </div>
+                </div>
+            </div>
+            <!--======================================================================-->
+            <!--=============================== Salesforce Modules Section =============================-->
+            <div class="main-body-section">
+                <h2 class="heading">Learn valuable skills for free, with Trailhead.</h2>
+                <p>Follow guided learning paths and get hands-on to learn Salesforce, digital, and soft skills from anywhere.</p>
+                <div class="sforce-module-card-container">
+                    <div class="sforce-module-card">
+                        <div class="sforce-module-card-image-wrapper">
+                            <img class="sforce-module-card-image" src="./assets/images/course-img-3.webp">
+                        </div>
+                        <div class="sforce-module-card-taglist">
+                            <div class="sforce-module-card-tag">Module</div>
+                        </div>
+                        <div class="sforce-module-card-text">
+                            <h3 class="sforce-module-card-heading">Salesforce Values: Quick Look</h3>
+                            <div class="sforce-module-card-description">Learn how Salesforce helps your business build stronger relationships with your customers.</div>
+                            <div class="sforce-module-card-link-wrapper">
+                                <a href=".">Start learning</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sforce-module-card">
+                        <div class="sforce-module-card-image-wrapper">
+                            <img class="sforce-module-card-image" src="./assets/images/course-img-2.webp">
+                        </div>
+                        <div class="sforce-module-card-taglist">
+                            <div class="sforce-module-card-tag">Module</div>
+                        </div>
+                        <div class="sforce-module-card-text">
+                            <h3 class="sforce-module-card-heading">Salesforce CRM</h3>
+                            <div class="sforce-module-card-description">Learn how to use customer relationship management (CRM) software to grow your business.</div>
+                            <div class="sforce-module-card-link-wrapper">
+                                <a href=".">Start learning</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sforce-module-card">
+                        <div class="sforce-module-card-image-wrapper">
+                            <img class="sforce-module-card-image" src="./assets/images/course-img-1.webp">
+                        </div>
+                        <div class="sforce-module-card-taglist">
+                            <div class="sforce-module-card-tag">Module</div>
+                        </div>
+                        <div class="sforce-module-card-text">
+                            <h3 class="sforce-module-card-heading">Sales Cloud Basics</h3>
+                            <div class="sforce-module-card-description">Grow your business, boost productivity, and make smart decisions with Sales Cloud.</div>
+                            <div class="sforce-module-card-link-wrapper">
+                                <a href=".">Start learning</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <div class="section-footer-button-wrapper">
+                        <button class="section-button-hollow">Learn for free <i class="fa-solid fa-up-right-from-square"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!--======================================================================-->
+            <!--=============================== Companies Section =============================-->
+            <div class="main-body-section footer-image-container footer-image-container-2">
+                <h2 class="heading">Over 150,000 companies, both big and small, are growing their business with Salesforce.</h2>
+                <div class="section-footer-button-wrapper">
+                    <button class="section-button-hollow">View all customers</button>
+                </div>
+                <div class="companies-card-container">
+                    <div class="company-card">
+                        <a href="">
+                            <img class="company-logo" src="./assets/images/in-hp-min-logo-balaji.png">
+                        </a>
+                    </div>
+                    <div class="company-card">
+                        <a href="">
+                            <img class="company-logo" src="./assets/images/in-hp-min-logo-flame.png">
+                        </a>
+                    </div>
+                    <div class="company-card">
+                        <a href="">
+                            <img class="company-logo" src="./assets/images/in-hp-min-logo-genpact.png">
+                        </a>
+                    </div>
+                    <div class="company-card">
+                        <a href="">
+                            <img class="company-logo" src="./assets/images/in-hp-min-logo-godrejboyce.png">
+                        </a>
+                    </div>
+                    <div class="company-card">
+                        <a href="">
+                            <img class="company-logo" src="./assets/images/in-hp-min-logo-mahindra.png">
+                        </a>
+                    </div>
+                    <div class="company-card">
+                        <a href="">
+                            <img class="company-logo" src="./assets/images/in-hp-min-logo-pepe.png">
+                        </a>
+                    </div>
+                    <div class="company-card">
+                        <a href="">
+                            <img class="company-logo" src="./assets/images/in-hp-min-logo-razorpay.png">
+                        </a>
+                    </div>
+                    <div class="company-card">
+                        <a href="">
+                            <img class="company-logo" src="./assets/images/in-hp-min-logo-secutech.png">
+                        </a>
+                    </div>
+                </div>
+                <img class="section-footer-overlay" src="./assets/images/outer-segment.png">
+            </div>
+            <!--======================================================================-->
+            <!--=============================== Free Trail Box Section =============================-->
+            <div class="main-body-section">
+                <div class="free-trial-box">
+                    <div class="free-trial-stuff">
+                        <h2 class="free-trial-heading">Try Salesforce for free. No credit card required, no software to install.</h2>
+                        <div class="section-footer-button-wrapper">
+                            <button class="section-button-solid">Start free trial</button>
+                            <button class="section-button-hollow">See pricing <i class="fa-solid fa-up-right-from-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="free-trial-image-wrapper">
+                        <img class="free-trial-image vertically-centered-elem" src="./assets/images/free-trial.png">
+                    </div>
+                </div>
+            </div>
+            <!--======================================================================-->
+            <!--=============================== Help Section =============================-->
+            <div class="main-body-section">
+                <h2 class="heading">How can we help grow your business?</h2>
+                <div class="help-section-container">
+                    <div class="help-card">
+                        <div class="help-card-image-wrapper">
+                            <img class="help-image" src="./assets/images/happy-people (4).jpg">
+                        </div>
+                        <div class="help-link-wrapper">
+                            <a href="" class="help-link">Sell faster</a>
+                        </div>
+                    </div>
+                    <div class="help-card">
+                        <div class="help-card-image-wrapper">
+                            <img class="help-image" src="./assets/images/happy-people (2).jpg">
+                        </div>
+                        <div class="help-link-wrapper">
+                            <a href="" class="help-link">Close more deals</a>
+                        </div>
+                    </div>
+                    <div class="help-card">
+                        <div class="help-card-image-wrapper">
+                            <img class="help-image" src="./assets/images/happy-people (3).jpg">
+                        </div>
+                        <div class="help-link-wrapper">
+                            <a href="" class="help-link">Scale service</a>
+                        </div>
+                    </div>
+                    <div class="help-card">
+                        <div class="help-card-image-wrapper">
+                            <img class="help-image" src="./assets/images/happy-people (1).jpg">
+                        </div>
+                        <div class="help-link-wrapper">
+                            <a href="" class="help-link">Build customer relationships</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--======================================================================-->
+            <!--=============================== Achievements Section =============================-->
+            <div class="main-body-section footer-image-container footer-image-container-3">
+                <h2 class="heading">Our technology helps people create better jobs, lives, companies, and communities.</h2>
+                <div class="achievements-card-container">
+                    <div class="achievements-card">
+                        <div class="achievements-image-wrapper">
+                            <img class="achievements-image" src="./assets/images/1.5b-dollah.png">
+                        </div>
+                        <div class="achievements-description">Technology given for free or discounted</div>
+                    </div>
+                    <div class="achievements-card">
+                        <div class="achievements-image-wrapper">
+                            <img class="achievements-image" src="./assets/images/fortune-1.png">
+                        </div>
+                        <div class="achievements-description">Fortune 100 Best Companies to Work For 2024 (16 years in a row)</div>
+                    </div>
+                    <div class="achievements-card">
+                        <div class="achievements-image-wrapper">
+                            <img class="achievements-image" src="./assets/images/fortune-2.png">
+                        </div>
+                        <div class="achievements-description">Fortune World’s Most Admired Companies 2024</div>
+                    </div>
+                </div>
+                
+                <img class="section-footer-overlay" src="./assets/images/outer-segment.png">
+            </div>
+            <!--====================================================================================-->
+            <!--=============================== Contact Box =============================-->
+            <div class="main-body-section">
+                <div class="contact-container-box">
+                    <div class="contact-container">
+                        <h2 class="contact-heading">Questions? We’ll put you on the right path.</h2>
+                        <div class="contact-description">Ask about Salesforce products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help.</div>
+                        <div class="section-footer-button-wrapper">
+                            <button class="section-button-solid">Contact us <i class="fa-solid fa-up-right-from-square"></i></button>
+                            <a class="contact-link">Editions & pricing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--======================================================================-->
+        <!--=============================== Footer =============================-->
+        <footer>
+            <!--=============================== Footer Top Section =============================-->        
+            <div class="footer-top">
+                <div class="footer-top-column master-column">
+                    <div class="footer-top-image-wrapper">
+                        <img class="footer-top-image" src="./assets/images/salesforce-with-text-logo.svg">
+                    </div>
+                    <div class="footer-social-media-container">
+                        <div class="footer-social-media-wrapper">
+                            <a href=""><i class="fa-brands fa-square-facebook footer-social-media-icon"></i></a>
+                        </div>
+                        <div class="footer-social-media-wrapper">
+                            <a href=""><i class="fa-brands fa-square-x-twitter footer-social-media-icon"></i></a>
+                        </div>
+                        <div class="footer-social-media-wrapper">
+                            <a href=""><i class="fa-brands fa-linkedin footer-social-media-icon"></i></a>
+                        </div>
+                        <div class="footer-social-media-wrapper">
+                            <a href=""><i class="fa-brands fa-square-instagram footer-social-media-icon"></i></a>
+                        </div>
+                        <div class="footer-social-media-wrapper">
+                            <a href=""><i class="fa-brands fa-square-youtube footer-social-media-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-top-contact">Call us at 1800-420-7332</div>
+                </div>
+                <div class="footer-top-column">
+                    <div class="footer-top-column-heading">New to Salesforce?</div>
+                    <div class="footer-top-column-content-container">
+                        <a href="">Why Salesforce</a>
+                        <a href="">What is CRM?</a>
+                        <a href="">Explore All Products</a>
+                        <a href="">SaaS</a>
+                        <a href="">Customer Success</a>
+                        <a href="">Product Pricing</a>
+                    </div>
+                </div>
+                <div class="footer-top-column">
+                    <div class="footer-top-column-heading">About Salesforce</div>
+                    <div class="footer-top-column-content-container">
+                        <a href="">Our Story</a>
+                        <a href="">Careers</a>
+                        <a href="">Press <i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="">Blog <i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="">Security and Performance <i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="">Salesforce.org</a>
+                        <a href="">Best CRM Software</a>
+                        <a href="">Sustainability <i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="">Legal <i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="">Give us your Feedback</a>
+                    </div>
+                </div>
+                <div class="footer-top-column">
+                    <div class="footer-top-column-heading">Popular Links</div>
+                    <div class="footer-top-column-content-container">
+                        <a href="">New Release Features <i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="">Salesforce Mobile App</a>
+                        <a href="">Business App Store <i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="">Dreamforce <i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="">CRM Software</a>
+                        <a href="">Salesforce Plus <i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="">Salesforce for startups <i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!--=============================== Footer Bottom Section =============================-->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content-container">
+                    <div class="footer-worldwide-logo-container">
+                        <div class="footer-worldwide-logo-wrapper"><i class="fa-solid fa-globe footer-worldwide-logo"></i></div>
+                        <div class="footer-worldwide-logo-text">Worldwide</div>
+                        <div class="footer-worldwide-dropdown-wrapper"><i class="fa-solid fa-chevron-down"></i></div>
+                    </div>
+                    <div class="footer-bottom-text-container">
+                        <div class="footer-bottom-links-container">
+                            <a href="">Legal</a>
+                            <a href="">Terms of Service</a>
+                            <a href="">Privacy</a>
+                            <a href="">Responsible Disclosure</a> 
+                            <a href="">Trust</a>
+                            <a href="">Contact</a>
+                            <a href="">Cookie Preferences</a>
+                            <a href=""><img class="footer-cpra-image" src="./assets/images/footer-icon-cpra.svg"> Your Privacy Choices</a>
+                        </div>
+                        <div class="footer-bottom-copyright-wrapper">© Copyright 2024 Salesforce, Inc. <a href="">All rights reserved</a>. Various trademarks held by their respective owners.</div>
+                    </div>
+                </div>
+            </div>
+            <!--======================================================================-->
+        </footer>
+        <!--======================================================================-->
+        <div class="floating-chat-button">
+            <div class="chat-agent-image-wrapper">
+                <img class="chat-agent-image" src="./assets/images/agent15.png">
+            </div>
+            <div class="chat-text"><a href="">Let's Chat</a></div>
+        </div>
+    </body>
+    <script src="./js/script.js"></script>
+</html>

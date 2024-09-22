@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "Salesforce Sans";
+    src: url(../assets/fonts/SalesforceSans-Regular.ttf);
+}
+@font-face {
+    font-family: "ITC Avant Garde";
+    src: url(../assets/fonts/ITCAvantGarde.woff2);
+}
+
+:root {
+    --main-font: "Salesforce Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --header-font: "ITC Avant Garde", system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --header-color: #032d60;
+    --accent-color: #0176d3;
+    --max-container-width: 1260px;
+}
+
+html {display: contents; overflow: none;}
+
+body {
+    font-family: var(--main-font);
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: var(--main-font);
+    color: var(--header-color);
+    font-weight: 600;
+}
+a:hover {
+    text-decoration: none;
+    color: #135eab;
+}
+a:focus, a:active {color: #135eab;}
+
+/* Positions any element with this class to vertically center */
+.vertically-centered-elem {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.heading {
+    color: var(--header-color);
+    width: 66.67%;
+    margin: auto;
+    text-align: center;
+    font-family: var(--header-font);
+}
+
+h1 {font-size: 42px;}
+h2 {font-size: 30px;}
+
+p {
+    font-size: 18px;
+    width: 54%;
+    text-align: center;
+    margin: auto;
+    margin-top: 18px;
+    font-family: var(--main-font);
+    line-height: 27px;
+}
+
+.section-button-hollow {
+    padding: 12px 32px;
+    background-color: #ffffff;
+    border: 1.6px solid var(--accent-color);
+    border-radius: 3px;
+    color: var(--accent-color);
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.section-button-hollow:hover, .section-button-hollow:focus, .section-button-hollow:active {
+    cursor: pointer;
+    color: var(--header-color);
+    border: 1.6px solid var(--header-color);
+}
+
+.section-button-solid {
+    padding: 12px 32px;
+    background-color: var(--accent-color);
+    border: 1.6px solid var(--accent-color);
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.section-button-solid:hover, .section-button-solid:focus, .section-button-solid:active {
+    cursor: pointer;
+    background-color: var(--header-color);
+    border: 1.6px solid var(--header-color);
+}
+
+/*-------------------------------- Code for Responsive Behaviour ------------------------------*/
+@media (max-width: 768px) {
+    .section-button-hollow, .section-button-solid {
+        width: calc(100% - 108px);
+        display: block;
+        margin: auto;
+    }
+    p {width: calc(100% - 48px);}
+}
+

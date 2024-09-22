@@ -1,0 +1,100 @@
+header.top-header {
+    position: fixed;
+    top: 0px;
+    height: 96px;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+nav {
+    color: var(--header-color);
+    margin: 0px 32px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.navlinks-container {
+    height: inherit;
+    display: flex;
+}
+.navlinks-container:nth-of-type(1) {gap: 36px;}
+.navlinks-container:nth-of-type(2) {gap: 9px;}
+
+#nav-menu {display: none;}
+
+.navlink-wrapper {
+    text-align: center;
+}
+
+.navlink-image {
+    width: 69px;
+    max-width: 69px;
+}
+.navlink-image:nth-last-of-type(1) {display: none;}
+
+.navlink-contact-wrapper {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-button {
+    width: 36px;
+    border-radius: 100%;
+    aspect-ratio: 1;
+}
+.nav-button:hover, .nav-button-login:hover {
+    color: #0176d3;
+    background-color: #eaf5fe;
+}
+.nav-button-login {
+    padding: 6px 12px;
+    border-radius: 36px;
+}
+
+.nav-button-trial {
+    background-color: #2e844a;
+    color: #ffffff;
+    padding: 9px 24px;
+    border-radius: 3px;
+}
+.nav-button-trial:hover {
+    background-color: #1c3326;
+    border: #2e844a 1px solid inset;
+}
+
+.nav-button, .nav-button-login, .nav-button-trial, .navlink {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/*================================ Code for Responsive Behaviour ==============================*/
+
+@media (max-width: 1260px) {
+    header.top-header {height: 56px;}
+    nav {margin: 0px 24px;}
+    #nav-menu {display: block;}
+    #nav-menu > .nav-button {width: 18px;}
+    .navlink-image {
+        max-width: 45px;
+        width: 45px;
+    }
+    #nav-icon .navlink-icon {font-size: 21px;}
+    .navlink-image:nth-child(1) {display: none;}
+    .navlink-image:nth-last-child(1) {display: block;}
+    .large-width-links {display: none;}
+    .navlink-label {display: none;}
+    .nav-button {width: 18px;}
+    .nav-button-trial {padding: 0px;}
+    .nav-button:hover, .nav-button-login:hover {background-color: transparent;}
+    .nav-button:hover a, .nav-button-trial:hover a {color: var(--header-color);}
+    .navlinks-container:nth-child(1),.navlinks-container:nth-child(2) {gap: 18px;}
+    .nav-button-trial {
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+}

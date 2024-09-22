@@ -1,0 +1,598 @@
+.main-body {
+    margin-top: 96px;
+}
+
+@media (max-width: 1260px) {
+    .main-body {margin-top: 56px;}
+    .heading {width: calc(100% - 24px);}
+}
+
+/*================================ Dreamforce Advertisement ==============================*/
+
+.dforce-ad-strip {
+    position: relative;
+    background-color: #f0c437;
+    padding: 12px 24px;
+    font-family: var(--header-font);
+    color: var(--header-color);
+}
+
+.dforce-ad-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+}
+
+.dforce-ad-logo {
+    width: 120px;
+}
+
+.dforce-link {
+    font-weight: lighter !important;
+    font-size: 14px;
+    transform: translateY(calc(-50% - 0.15rem));
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+/*-------------------------------- Code for Responsive Behaviour (Dreamforce Advertisement) ------------------------------*/
+
+@media (max-width: 1024px) {
+    .dforce-ad-wrapper {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .dforce-logo-wrapper {margin-top: 18px;}
+    .dforce-ad-text, .dforce-ad-link {margin-top: 12px;}
+}
+
+/*========================================================================*/
+
+.main-body-section {
+    background-color: #ffffff;
+    margin: 108px 0px;
+    position: relative;
+}
+
+/*================================ Salesforce Products Section ==============================*/
+
+.sforce-products-card-container {
+    padding: 0px 54px;
+    display: grid;
+    max-width: var(--max-container-width);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 36px;
+    margin: auto;
+    margin-top: 72px;
+}
+
+.sforce-products-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0px 6px 18px -3px #8aa3a7ba;
+    width: 100%;
+}
+
+.sforce-products-card-image-wrapper {
+    width: 100%;
+}
+
+.sforce-products-card-image {
+    width: 100%;
+    border-radius: 18px 18px 0px 0px;
+}
+
+.sforce-products-card-text {
+    padding: 0px 24px;
+    min-height: 150px;
+}
+
+.sforce-products-card-heading {
+    color: var(--header-color);
+    font-family: var(--header-font);
+}
+
+.sforce-products-card-description {
+    font-family: var(--main-font);
+}
+
+.sforce-products-card-link-wrapper {
+    padding: 0px 24px;
+    padding-bottom: 36px;
+}
+
+.sforce-products-card-link-wrapper > a {
+    text-decoration: underline;
+}
+
+.section-footer-button-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+    gap: 18px;
+}
+
+.footer-image-container {
+    padding-bottom: 18%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+.footer-image-container-1 {background-image: url('../assets/images/background_img-1.webp'), linear-gradient(to bottom, transparent, #b0c4df54);}
+
+/*-------------------------------- Code for Responsive Behaviour (Salesfoce Products Section) ------------------------------*/
+
+@media (max-width: 1024px) {
+    .sforce-products-card-container {grid-template-columns: 1fr 1fr;}
+}
+
+@media (max-width: 768px) {
+    .sforce-products-card-container {grid-template-columns: 1fr;}
+    .section-footer-button-wrapper {flex-direction: column;}
+}
+
+/*========================================================================*/
+/*================================ Salesforce Modules Section ==============================*/
+
+.sforce-module-card-container {
+    padding: 0px 54px;
+    display: grid;
+    max-width: var(--max-container-width);
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 54px;
+    margin: auto;
+    margin-top: 72px;
+}
+
+.sforce-module-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0px 6px 18px -3px #8aa3a7ba;
+    width: 100%;
+    padding: 24px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sforce-module-card-image {
+    width: 120px;
+    aspect-ratio: 1;
+    display: block;
+    margin: auto;
+}
+
+.sforce-module-card-taglist {
+    padding: 15px 24px;
+    display: flex;
+}
+
+.sforce-module-card-tag {
+    color: var(--header-color);
+    font-family: var(--main-font);
+    background-color: #1ea7fd33;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 36px;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.sforce-module-card-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sforce-module-card-heading {
+    color: var(--header-color);
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    margin: 0px;
+    margin-bottom: 18px;
+    padding: 0px 24px;
+}
+
+.sforce-module-card-description {
+    font-family: var(--main-font);
+    min-height: 108px;
+    padding: 0px 24px;
+}
+
+.sforce-module-card-link-wrapper {
+    margin-bottom: 9px;
+    padding: 0px 24px;
+    bottom: 0px;
+    margin-top: auto;
+}
+
+.sforce-module-card-link-wrapper > a {
+    text-decoration: underline;
+}
+
+.footer-image-container-2 {background-image: url(../assets/images/background-img-4.png), linear-gradient(to bottom, transparent, #b0c4df54);}
+
+.section-footer-overlay {
+    width: 100%;
+    display: block;
+    bottom: 0px;
+    position: absolute;
+}
+
+
+/*-------------------------------- Code for Responsive Behaviour (Salesforce Modules Section) ------------------------------*/
+
+@media (max-width: 768px) {
+    .sforce-module-card-container {grid-template-columns: 1fr;}
+}
+/*========================================================================*/
+/*================================ Code for Responsive Behaviour (Companies Section) ==============================*/
+
+.companies-card-container {
+    margin: 54px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1440px;
+    padding: 54px;
+    margin: auto;
+    gap: 18px;
+}
+
+.company-card {
+    border-radius: 6px;
+    padding: 24px 32px;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 18px -9px #5c7676ba;
+}
+
+.company-logo {
+    max-height: 76px;
+    max-width: 136px;
+    object-fit: contain;
+}
+
+/*-------------------------------- Code for Responsive Behaviour (Companies Section) ------------------------------*/
+
+@media (max-width: 768px) {
+    .companies-card-container {
+        gap: 9px;
+        padding: 54px 24px;
+    }
+    .company-card {
+        padding: 9px 3px;
+    }
+}
+
+/*========================================================================*/
+/*================================ Free Trial Box Section ==============================*/
+.free-trial-box {
+    max-width: var(--max-container-width);
+    width: calc(100% - 96px);
+    margin: auto;
+    margin-top: 0%;
+    border-radius: 18px;
+    box-shadow: 0px 6px 24px -12px #647683ad;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 9px;
+}
+.free-trial-stuff {
+    width: 50%;
+    padding: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.free-trial-heading {
+    text-align: center;
+    font-family: var(--header-font);
+    color: var(--header-color);
+    font-size: 39px;
+}
+.free-trial-image-wrapper {
+    width: 50%;
+}
+.free-trial-image {
+    max-height: 420px;
+    width: 100%;
+}
+
+/*-------------------------------- Code for Responsive Behaviour (Free Trial Section) ------------------------------*/
+
+@media (max-width: 768px) {
+    .free-trial-box {flex-direction: column;}
+    .free-trial-stuff, .free-trial-image-wrapper {
+        width: calc(100% - 48px);
+        padding: 0px
+    ;}
+    .free-trial-image {transform: none;}
+}
+
+/*========================================================================*/
+/*================================ Help Section ==============================*/
+.help-section-container {
+    max-width: var(--max-container-width);
+    padding: 72px 36px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 54px;
+}
+
+.help-card {
+    width: 100%;
+}
+
+.help-card-image-wrapper {
+    width: 100%;
+}
+
+.help-image {
+    width: 100%;
+}
+
+.help-link-wrapper {
+    margin-top: 36px;
+}
+
+.help-link {text-decoration: underline;}
+
+/*-------------------------------- Code for Responsive Behaviour (Free Trial Section) ------------------------------*/
+
+@media (max-width: 1024px) {
+    .help-section-container {grid-template-columns: 1fr 1fr;}
+}
+
+@media (max-width: 768px) {
+    .help-section-container {grid-template-columns: 1fr;}
+}
+
+/*========================================================================*/
+/*================================ Achievements Section ==============================*/
+.achievements-card-container {
+    max-width: var(--max-container-width);
+    margin: 72px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 54px;
+}
+.achievements-card {
+    width: 100%;
+}
+.achievements-image-wrapper {
+    width: 100%;
+}
+.achievements-image {
+    width: 100%;
+}
+.achievements-description {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 18px;
+}
+
+.footer-image-container-3 {background-image: url(../assets/images/background-img-2.png), linear-gradient(to bottom, transparent, #b0c4df54);}
+
+/*-------------------------------- Code for Responsive Behaviour (Achievements Section) ------------------------------*/
+
+@media (max-width: 768px) {
+    .achievements-card-container {grid-template-columns: 1fr;}
+}
+
+/*========================================================================*/
+/*=============================== Contact Box =============================*/
+.contact-container-box {
+    max-width: var(--max-container-width);
+    width: calc(100% - 96px);
+    padding-top: 27px;
+    padding-bottom: 126px;
+    margin: auto;
+    background-image: url(../assets/images/background-img-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border-radius: 18px;
+    box-shadow: 0px 9px 18px -6px #819cb5;
+}
+
+.contact-container {
+    width: 45%;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-heading {
+    font-family: var(--header-font);
+    color: var(--header-color);
+    font-size: 39px;
+}  
+
+.contact-description {
+    font-size: 18px;
+}
+
+.contact-link {
+    padding: 12px 32px;
+    text-decoration: underline;
+}
+
+/*-------------------------------- Code for Responsive Behaviour (Contact Box) ------------------------------*/
+
+@media (max-width: 768px) {
+    .contact-container-box {
+        width: calc(100% - 48px);
+        padding-bottom: 390px;
+        background-size: contain;
+    }
+    .contact-container {width: calc(100% - 24px)}
+    .main-body-section:nth-last-of-type(1) {margin-bottom: 54px;}
+}
+
+/*========================================================================*/
+/*================================ Footer Top Section ==============================*/
+.footer-top {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1312px;
+    margin: auto;
+    padding: 0px 12px;
+}
+.footer-top-column:not(.master-column) {
+    margin-right: auto;
+}
+.master-column {
+    width: 33.33%;
+}
+.footer-top-image-wrapper {
+    width: 100%;
+}
+.footer-top-image {
+    height: 64px;
+}
+
+.footer-social-media-container {
+    display: flex;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    gap: 16px;
+}
+.footer-social-media-icon {
+    width: 30px;
+    height: 30px;
+    color: #59575c;
+}
+.footer-top-contact {
+    font-family: var(--header-font);
+    color: #444444;
+    font-size: 14px;
+}
+
+.footer-top-column-heading {
+    font-family: var(--header-font);
+    color: #444444;
+    font-size: 14px;
+}
+.footer-top-column-content-container {
+    margin: 36px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.footer-top-column-content-container a {
+    font-size: 12px;
+    font-family: var(--main-font);
+    color: #0b5cab;
+    font-weight: 100;
+}
+
+/*-------------------------------- Code for Responsive Behaviour (Footer Top Section) ------------------------------*/
+@media (max-width: 1024px) {
+    .footer-top {display: none;}
+}
+
+/*========================================================================*/
+/*================================ Footer Bottom Section ==============================*/
+.footer-bottom {
+    background-color: #032e61; 
+    padding: 18px;
+    padding-bottom: 24px;
+    margin-top: 36px;
+}
+
+.footer-bottom-content-container {
+    display: flex;
+    width: 1312px;
+    margin: auto;
+    gap: 54px;
+}
+
+.footer-worldwide-logo-container {
+    display: flex;
+    color: #ffffff;
+    font-size: 16px;
+    gap: 9px;
+    font-weight: 600;
+}
+
+.footer-worldwide-logo {
+    font-size: 21px;
+}
+
+.footer-bottom-text-container {
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-bottom-text-container a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 100;
+}
+
+.footer-bottom-links-container {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer-cpra-image {
+    height: 12px;
+}
+
+@media (max-width: 1350px) {
+    .footer-bottom-content-container {width: 1004px;}
+}
+
+@media (max-width: 1024px) {
+    .footer-bottom-content-container {
+        width: calc(100% - 24px);
+        gap: 30px;
+        flex-direction: column;
+    }
+    .footer-worldwide-logo-container {
+        margin: auto;
+    }
+    .footer-bottom-links-container {gap: 9px;}
+}
+/*========================================================================*/
+
+.floating-chat-button {
+    position: fixed;
+    z-index: 999;
+    background-color: var(--accent-color);
+    border-radius: 25px;
+    height: 48px;
+    min-width: 146px;
+    max-width: 317px;
+    bottom: 36px;
+    right: 45px;
+    display: flex;
+    gap: 3px;
+    transition: bottom 0.6s;
+}
+
+.chat-agent-image-wrapper {
+    height: 36px;
+    padding: 6px;
+}
+
+.chat-agent-image {height: 100%;}
+
+.chat-text {margin: auto 0px;}
+.chat-text > a {
+    color: #ffffff;
+    font-family: var(--header-font);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .floating-chat-button {
+        right: 9px;
+    }
+}
