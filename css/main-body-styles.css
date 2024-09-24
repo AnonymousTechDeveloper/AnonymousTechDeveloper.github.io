@@ -305,7 +305,8 @@
     .free-trial-box {flex-direction: column;}
     .free-trial-stuff, .free-trial-image-wrapper {
         width: calc(100% - 48px);
-        padding: 0px
+        padding: 0px;
+        margin: auto
     ;}
     .free-trial-image {transform: none;}
 }
@@ -423,7 +424,8 @@
 @media (max-width: 768px) {
     .contact-container-box {
         width: calc(100% - 48px);
-        padding-bottom: 390px;
+        /* padding-bottom: 390px; */
+        padding-bottom: calc(62vw - 48px); /*? This padding is where the background image will reside, takes 62% - 48px of the view width (62% is the approx height:width ratio of the image) 48px is the sum of total horizontal padding of the container */
         background-size: contain;
     }
     .contact-container {width: calc(100% - 24px)}
