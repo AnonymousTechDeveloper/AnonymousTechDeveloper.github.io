@@ -1,0 +1,72 @@
+.overlay-menu {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    height: calc(100% - 56px - 18px);
+    width: 50%;
+    background-color: #ffffff;
+    z-index: 100;
+    padding: 9px 18px;
+    overflow-y: scroll;;
+}
+
+.overlay-main-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    margin-top: 9px;
+}
+
+.overlay-navlink-button {
+    display: block;
+    text-align: left;
+    display: flex;
+    font-family: var(--header-font);
+    color: var(--header-color);
+    border: none;
+    background-color: #ffffff;
+    gap: 12px;
+}
+
+.overlay-main-links-container .overlay-navlink-button {font-size: 24px;}
+
+.overlay-menu-redirect-icon {
+    position: relative;
+    display: block;
+    margin: auto 0px;
+    margin-left: auto;
+    color: #939393;
+    width: 20px;
+    height: 20px;
+}
+
+.overlay-other-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    margin-top: 54px;
+}
+
+.overlay-other-links-container .overlay-navlink-button {font-size: 16px;}
+
+.overlay-link-label-icon {width: 20px;}
+
+.overlay-menu-contact-number {
+    text-align: center;
+    margin-top: 54px;
+    margin-bottom: 18px;
+    font-family: var(--header-font);
+    color: var(--header-color);
+}
+
+/*================================ Code responsible for responsive behaviour ==============================*/
+
+@media (max-width: 768px) {
+    .overlay-menu {width: calc(100% - 36px);}
+    .hidden-scrollbar::-webkit-scrollbar {display: none !important;}
+    .hidden-scrollbar {overflow: hidden;}
+}
+
+@media (min-width: 1260px) {
+    .overlay-menu {display: none !important;} /*? Force hide the overlay menu once the window increases beyond the 768 limit */
+}

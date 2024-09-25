@@ -439,7 +439,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 1312px;
     margin: auto;
-    padding: 0px 12px;
+    padding: 0px 36px;
 }
 .footer-top-column:not(.master-column) {
     margin-right: auto;
@@ -492,6 +492,10 @@
 /*-------------------------------- Code for Responsive Behaviour (Footer Top Section) ------------------------------*/
 @media (max-width: 1024px) {
     .footer-top {display: none;}
+}
+
+@media (max-width: 1350px) {
+    .footer-top {width: calc(100% - 72px);}
 }
 
 /*========================================================================*/

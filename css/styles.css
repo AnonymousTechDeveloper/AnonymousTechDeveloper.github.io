@@ -15,13 +15,9 @@
     --max-container-width: 1260px;
 }
 
-html {display: contents; overflow: none;}
-
 body {
     font-family: var(--main-font);
     margin: 0px;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 a {

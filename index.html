@@ -12,6 +12,7 @@
         <link rel="icon" type="image/svg" href="./assets/icons/favicon.svg" />
         <!-- Links to external files and links -->
         <link href="./css/styles.css" rel="stylesheet" />
+        <link href="./css/overlay-menu.css" rel="stylesheet" />
         <link href="./css/navbar-styles.css" rel="stylesheet" />
         <link href="./css/header-styles.css" rel="stylesheet" />
         <link href="./css/main-body-styles.css" rel="stylesheet" />
@@ -24,9 +25,10 @@
                 <!-- Redirectional nav links positioned to the left -->
                 <div class="navlinks-container">
                     <!-- Main logo: Home page link -->
-                    <div class="navlink-wrapper" id="nav-menu">
+                    <div class="navlink-wrapper" id="nav-menu" onclick="toggleOverLayMenu()">
                         <div class="nav-button vertically-centered-elem">
                             <a class="vertically-centered-elem"><i class="fa-solid fa-bars navlink-icon"></i></a>
+                            <a class="vertically-centered-elem"><i class="fa-solid fa-xmark navlink-icon"></i></a>
                         </div>
                     </div>
                     <div class="navlink-wrapper">
@@ -94,6 +96,55 @@
             </nav>
         </header>
         <!--================================================================================-->
+        <!--=============================== Overlay Menu (for portrait devices) =============================-->
+        <div class="overlay-menu">
+            <div class="overlay-main-links-container">
+                <button class="overlay-navlink-button">
+                    Products
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+                <button class="overlay-navlink-button">
+                    Industries
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+                <button class="overlay-navlink-button">
+                    Customers
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+                <button class="overlay-navlink-button">
+                    Learning
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+                <button class="overlay-navlink-button">
+                    Support
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+                <button class="overlay-navlink-button">
+                    Company
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+                <button class="overlay-navlink-button">
+                    Salesforce+
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+            </div>
+            <div class="overlay-other-links-container">
+                <button class="overlay-navlink-button">
+                    <i class="fa-solid fa-user overlay-link-label-icon"></i> Login
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+                <button class="overlay-navlink-button">
+                    <i class="fa-solid fa-phone overlay-link-label-icon"></i> Contact
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+                <button class="overlay-navlink-button">
+                    <i class="fa-solid fa-globe overlay-link-label-icon"></i> Change Region
+                    <i class="fa-solid fa-chevron-right overlay-menu-redirect-icon"></i>
+                </button>
+            </div>
+            <div class="overlay-menu-contact-number">1800-420-7332</div>
+        </div>
+        <!--======================================================================-->
         <!--=============================== Main Body (Scrollable) =============================-->
         <div class="main-body">
             <!--=============================== Dreamforce Advertisement =============================-->
