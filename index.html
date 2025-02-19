@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DVM Merch Signings | Ansh Malviya</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Ansh Malviya" />
+        <meta name="description" content="This is an evaluative component for recruitment in Department of Visual Media, BITS Pilani." />
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+        <link rel="icon" href="./assets/favicon.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="form-container">
+            <form id="merch-form">
+                <h1 class="form-title">Merch Signings</h1>
+                <div class="form-content">
+                    <div class="form-input-container" id="form-input-name-container">
+                        <label for="form-input-name" class="form-label-text form-label" data-empty-msg="Please enter your name..." data-error-msg="The name should be atleast 5 characters long...">Name:</label>
+                        <input type="text" id="form-input-name" class="form-input-text" name="input-name" placeholder="Your name..." maxlength="50" minlength="5" />
+                    </div>
+                    <div class="form-input-container" id="form-input-email-container">
+                        <label for="form-input-email" class="form-label-text form-label" data-empty-msg="Please enter your BITS email id..." data-error-msg="Please enter a valid BITS email id...">(BITS) Email ID:</label>
+                        <input type="email" id="form-input-email" class="form-input-text" name="input-emailid" placeholder="your_id@campus.bits-pilani.ac.in" />
+                    </div>
+                    <div class="form-input-container" id="form-input-number-container">
+                        <label for="form-input-number" class="form-label-text form-label" data-empty-msg="Please enter your contact number..." data-error-msg="Contact number should be 10 characters long and should only contain numbers...">Contact No.:</label>
+                        <input type="tel" id="form-input-number" class="form-input-text" name="input-number" placeholder="Your contact number..." />
+                    </div>
+                    <div class="form-input-container" id="form-input-id-container">
+                        <label for="form-input-id" class="form-label-text form-label" data-empty-msg="Please enter your BITS ID..." data-error-msg="Please enter a valid BITS ID (20XXYYZZAAAAB)...">BITS ID:</label>
+                        <input type="text" id="form-input-id" class="form-input-text" name="input-id" placeholder="20XXYYZZAAAAB" />
+                    </div>
+                    <div class="form-input-container" id="form-input-hostel-container">
+                        <label for="form-input-hostel" class="form-label-dd form-label" data-empty-msg="Please choose a hostel...">Hostel:</label>
+                        <select id="form-input-hostel" class="form-input-dd" name="input-hostel" aria-placeholder="Choose your hostel">
+                            <option value="" disabled selected>Choose your hostel</option>
+                            <option value="ram">Ram Bhawan</option>
+                            <option value="budh">Budh Bhawan</option>
+                            <option value="meera">Meera Bhawan</option>
+                            <option value="malviya">Malviya Bhawan</option>
+                            <option value="krishna">Krishna Bhawan</option>
+                            <option value="gandhi">Gandhi Bhawan</option>
+                            <option value="shankar">Shankar Bhawan</option>
+                            <option value="vyas">Vyas Bhawan</option>
+                            <option value="bhagirath">Bhagirath Bhawan</option>
+                            <option value="vishwakarma">Vishwakarma Bhawan</option>
+                            <option value="rana_pratab">Rana Pratab Bhawan</option>
+                            <option value="ashok">Ashok Bhawan</option>
+                            <option value="cvr">CVR Bhawan</option>
+                            <option value="srinivas_ramanujan">Srinivas Ramanujan Bhawan</option>
+                        </select>
+                    </div>
+                    <div class="form-input-container" id="form-input-size-container">
+                        <label class="form-label" data-empty-msg="Please choose a merch size...">Size:</label>
+                        <span class="form-radio-wrapper">
+                            <input type="radio" id="form-input-size-xl" class="form-input-radio form-input-size" value="xl" name="input-size" />
+                            <label for="form-input-size-xl" class="form-label-radio" >Xtra Large</label>
+                            <input type="radio" id="form-input-size-l" class="form-input-radio form-input-size" value="l" name="input-size" />
+                            <label for="form-input-size-l" class="form-label-radio">Large</label>
+                            <input type="radio" id="form-input-size-m" class="form-input-radio form-input-size" value="m" name="input-size" />
+                            <label for="form-input-size-m" class="form-label-radio">Medium</label>
+                            <input type="radio" id="form-input-size-s" class="form-input-radio form-input-size" value="s" name="input-size" />
+                            <label for="form-input-size-s" class="form-label-radio">Small</label>
+                        </span>
+                    </div>
+                    <div class="form-input-container" id="form-input-agreetnc-container">
+                        <input type="checkbox" id="form-input-agreetnc" class="form-input-checkbox form-label" />
+                        <label for="form-input-agreetnc" class="form-label form-label-agreetnc" data-empty-msg="Please agree to our terms and conditions..."><span>I agree to the <a href="">Terms and Conditions</a>.</span></label>
+                    </div>
+                    <div class="form-button-container">
+                        <input type="reset" onclick="resetForm(event)" class="form-button" />
+                        <input type="submit" onclick="handleSubmit(event)" class="form-button" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script src="./cookie.js"></script>
+    <script src="./script.js"></script>
+</html>

@@ -1,0 +1,192 @@
+:root {
+    --accent-color: #7231ea;
+    --primary-color: #8b858f;
+    --primary-bg-color: #2d2638;
+    --secondary-bg-color: #3a374c;
+    --header-font: "Open Sans";
+    --primary-font: "Lora";
+}
+
+html, body {background-color: var(--primary-bg-color);}
+* {user-select: none;}
+
+fieldset {
+    border-radius: 6px;
+}
+
+.form-container {    
+    padding: 0px 18px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-title {
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+
+    &.input-error label::after, &.input-empty label::after {
+        display: inline-block;
+        color: #ff0000af;
+        position: relative;
+    }
+
+    &.input-error label::after {content: attr(data-error-msg);}
+    &.input-empty label::after {content: attr(data-empty-msg);}
+    &.input-error label, &.input-empty label {color: #bd0c0c;}
+    &.input-error input[type=text], &.input-empty input[type=text], &.input-error input[type=email], &.input-empty input[type=email], &.input-error input[type=tel], &.input-empty input[type=tel], &.input-empty select {
+        border: 2px solid #ff0000;
+    }
+}
+.form-label {
+    font-family: var(--header-font);
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 18px;
+
+    &.form-label-agreetnc {
+        &::before {position: absolute;}
+        & span {margin-left: 18px;}
+        &::after {
+            align-self: flex-start;
+            width: 100%;
+        }
+    }
+}
+
+.form-input-text, .form-input-dd {
+    background-color: var(--secondary-bg-color);
+    border: 0px;
+    padding: 12px 18px;
+    border-radius: 9px;
+    color: #ffffff;
+    font-family: var(--primary-font);
+    border: 2px solid transparent;
+
+    &::placeholder {color: var(--primary-color);}
+    &:focus {
+        border: 2px solid var(--accent-color) !important;
+        outline: none;
+    }
+}
+.form-input-dd option {
+    &:hover {
+        background-color: #7231ea;
+    }
+}
+
+.form-label-radio, .input-empty label.form-label-radio {
+    color: #ffffff;
+    font-family: var(--primary-font);
+}
+
+.form-label-agreetnc a {
+    color: var(--accent-color);
+    
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.form-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.form-radio-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.form-button {
+    padding: 12px 18px;
+    border-radius: 9px;
+    border: 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--header-font);
+    transition: all 0.15s;
+
+    &:nth-of-type(1) {
+        background-color: transparent;
+        border: 2px solid var(--accent-color);
+        &:hover {box-shadow: 0px 0px 12px var(--accent-color) inset;}
+    }
+    &:nth-of-type(2) {
+        background-color: var(--accent-color);
+        border: 2px solid transparent;
+        &:hover {box-shadow: 0px 0px 15px var(--accent-color);}
+    }
+    &:hover {opacity: 0.8;}
+}
+
+.form-input-radio {
+    display: none;
+
+    & + label::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        height: 12px;
+        width: 12px;
+        /* margin-right: 9px; */
+        border-radius: 100%;
+        background-color: #8b858f;
+        margin-right: 6px;
+    }
+    &:checked + label::before {
+        height: 6px;
+        width: 6px;;
+        background-color: #ffffff;
+        border: 3.5px solid var(--accent-color);
+        box-shadow: 0px 0px 9px var(--accent-color);
+    }
+}
+
+.form-label-radio {
+    &:hover {
+        color: var(--accent-color);
+    }
+}
+
+.form-input-checkbox {
+    display: none;
+
+    & + label::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        height: 12px;
+        width: 12px;
+        background-color: #8b858f;
+        border-radius: 3px;
+        top: 1px;
+        margin-right: 6px;
+    }
+    &:checked + label::before {
+        background-color: #ffffff;
+        height: 6px;
+        width: 6px;
+        border: 3.5px solid var(--accent-color);
+        box-shadow: 0px 0px 9px var(--accent-color);
+    }
+}
