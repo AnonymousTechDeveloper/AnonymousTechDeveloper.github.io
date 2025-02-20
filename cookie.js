@@ -37,7 +37,7 @@ const throwAllCookies = () => {
 
     while (matchKeys !== null) {
         matchKeys = searchKey.exec(cookie);
-        console.log(matchKeys)
+        
         if (matchKeys === null) return;
         if (throwCookie(matchKeys[2]) !== 0) failure = 1;
         

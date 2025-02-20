@@ -20,7 +20,34 @@ const emailPattern = /f\d{8}@(pilani|hyderabad|goa)\.bits-pilani\.ac\.in/i;
 const numberPattern = /\d{10}/;
 const bitsIdPattern = /\d{4}(A|B)\d[a-z]{2}\d{4}[a-z]/i;
 
-const responseKeys = ["name", "email", "number", "bitsId", "hostel", "size"];
+const notificationContainer = document.getElementById("notification-container");
+
+const options = {
+    method: 'GET'
+}
+
+class Notification {
+    constructor(message, expTime = 3) {
+        this.element = document.createElement("div");
+        this.element.className = "notification-item";
+        this.element.innerHTML = message.replace("\n", "<br>");
+
+        notificationContainer.appendChild(this.element);
+
+        setTimeout(() => this.destroy(), expTime*1000);
+    }
+
+    destroy() {
+        const killTime = 0.5;
+
+        this.element.style.transition = `opacity ${killTime}s`;
+        this.element.style.opacity = 0;
+        setTimeout(() => {
+            notificationContainer.removeChild(this.element)
+            delete this;
+        }, killTime*1000)
+    }
+}
 
 const handleSubmit = (event) => {
     event.preventDefault();
@@ -96,12 +123,20 @@ const handleSubmit = (event) => {
         agreeTnCInputContainer.classList.add("input-empty");
     }
 
+    if (failure) new Notification("Please fill all the required detail in the correct format and agree to our Terms and Conditions in order to submit.", 3);
+
     if (tasteCookie(response.bitsId) === '1') {
-        console.log("id exists");
+        new Notification(`There is already a response from the provided BITS ID (${response.bitsId}). Each person can only fill this form once. If you think it was a mistake, then please contact us.`, 3);
         return;
     }
+    else if (!failure) {
+        const postResponse = fetch("https://www.foo.com", options);
+        console.log(postResponse);
+        bakeCookie(response.bitsId, 1);
+        new Notification(`Your response has been successfully recorded for BITS ID ${response.bitsId}. Thank you for buying our merch.`, 5);
+    }
+
     for (key in response) bakeCookie(key, response[key]);
-    if (!failure) bakeCookie(response.bitsId, 1);
 }
 
 const resetForm = (event) => [...inputContainersList].forEach((element) => element.classList.remove("input-error", "input-empty"));
