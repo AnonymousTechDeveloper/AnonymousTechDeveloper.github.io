@@ -196,7 +196,7 @@ fieldset {
     display: block;
     position: fixed;
     height: calc(100% - 72px);
-    background-color: #00000041;
+    background-color: transparent;
     width: calc(100% - 72px);
     max-width: 500px;
     top: 0px;
