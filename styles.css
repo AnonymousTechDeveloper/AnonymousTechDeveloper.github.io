@@ -7,7 +7,11 @@
     --primary-font: "Lora";
 }
 
-html, body {background-color: var(--primary-bg-color);}
+html, body {
+    background-color: var(--primary-bg-color);
+    height: 100vh;
+    overflow: hidden;
+}
 body {margin: 0px;}
 * {user-select: none;}
 
@@ -16,7 +20,12 @@ fieldset {
 }
 
 .form-container {    
-    padding: 0px 18px;
+    max-width: 600px;
+    min-width: 270px;
+    width: 100%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {display: none;}
 }
 
 .form-content {
@@ -26,6 +35,7 @@ fieldset {
 }
 
 .form-title {
+    margin-top: 0px;
     font-family: var(--header-font);
     font-weight: bold;
     font-size: 36px;
@@ -221,4 +231,113 @@ fieldset {
     font-size: 13px;
     backdrop-filter: blur(3px);
     pointer-events: all;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: calc(100% - 60px);
+    
+    padding: 30px;
+}
+
+.illustration-container {
+    flex-grow: 1;
+    min-width: 360px;
+    max-width: 630px;
+    position: relative;
+}
+
+.illustration {
+    position: absolute;
+    top: 0px;
+    height: calc(100% - 48px);
+    width: calc(100% - 48px);
+    background-image: url('https://images.unsplash.com/photo-1736942145358-ff047387450b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    border-radius: 9px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.illus-title {
+    margin: 0px;
+    color: #e1e1e1;
+    font-family: var(--header-font);
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.merch-illus-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.illus-nav {
+    flex-grow: 1;
+    &:hover .illus-nav-icon {opacity: 0.5;}
+}
+
+.illus-nav-icon {
+    color: rgb(202, 202, 202);
+    font-size: 36px;
+    padding: 12px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    margin: auto;
+}
+
+.illus-container {
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 200px;
+}
+.illus-item {
+    position: absolute;
+    transition: transform 0.5s;
+
+    &.item-left {transform: translateX(-150%);}
+    &.active-item {transform: translateX(0%);}
+    &.item-right {transform: translateX(150%);}
+}
+
+.illus-img {
+    width: 150px;
+    aspect-ratio: 1;
+    display: block;
+    margin: auto;
+    border-radius: 9px;
+}
+
+.illus-desc {
+    color: #e1e1e1;
+    max-width: 150px;
+    font-family: var(--primary-font);
+    font-size: 15px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+@media (max-width: 750px) {
+    body, html {overflow-y: auto;}
+    .main-container {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .illustration {position: relative;}
+    .form-container {min-width: 0px; max-width: none;}
+    .illustration-container {min-width: 0px; max-width: none;}
+    .form-title, .illus-title {font-size: 24px;}
+    .illus-desc {font-size: 12px;}
 }

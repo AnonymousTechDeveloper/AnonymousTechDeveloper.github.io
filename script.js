@@ -21,10 +21,33 @@ const numberPattern = /\d{10}/;
 const bitsIdPattern = /\d{4}(A|B)\d[a-z]{2}\d{4}[a-z]/i;
 
 const notificationContainer = document.getElementById("notification-container");
+const merchDisplayContainer = document.getElementById("illus-container");
 
 const options = {
     method: 'GET'
 }
+
+let merchList;
+let merchItemList;
+let activeProductIndex = 0;
+let sizeList;
+
+fetch("https://fakestoreapi.com/products?limit=5")
+    .then(res => res.json())
+    .then(res => {
+        merchList = res;
+        merchList.forEach((merch, index) => {
+            merchDisplayContainer.innerHTML += `
+                            <div class="illus-item ${index ? 'item-right' : 'active-item'}">
+                                <img class="illus-img" src="${merch.image}">
+                                <p class="illus-desc">${merch.title}</p>
+                            </div>
+            `;
+        });
+        merchItemList = [...document.getElementsByClassName("illus-item")];
+        sizeList = Array(5).fill(null)
+    })
+    .catch(error => new Notification(`Failed to fetch merch info.\nError: ${error}`));
 
 class Notification {
     constructor(message, expTime = 3) {
@@ -161,3 +184,21 @@ const rehydrateForm = () => {
     if (size !== null) sizeInputElementsList.filter((sizeRadioElement) => sizeRadioElement.value)[0].checked = true;
 }
 rehydrateForm();
+
+const rearrangeMerchItems = () => {
+    for (let i = 0; i < merchList.length; i++) {
+        const merchItem = merchItemList[i];
+        merchItem.classList.remove("item-left", "active-item", "item-right");
+        if (i < activeProductIndex) merchItem.classList.add("item-left");
+        else if (i == activeProductIndex) merchItem.classList.add("active-item");
+        else merchItem.classList.add("item-right");
+    }
+}
+
+const navMerchSlider = (direction) => {
+    activeProductIndex += direction;
+    if (activeProductIndex == merchList.length) activeProductIndex = 0;
+    else if (activeProductIndex < 0) activeProductIndex = merchList.length - 1;
+    console.log(activeProductIndex, direction)
+    rearrangeMerchItems();
+}
