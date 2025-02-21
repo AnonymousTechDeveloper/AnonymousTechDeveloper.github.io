@@ -27,12 +27,14 @@ const options = {
     method: 'GET'
 }
 
+const productLimit = 5;
+
 let merchList;
 let merchItemList;
 let activeProductIndex = 0;
-let sizeList;
+let sizeList = Array(productLimit).fill(null);
 
-fetch("https://fakestoreapi.com/products?limit=5")
+fetch(`https://fakestoreapi.com/products?limit=${productLimit}`)
     .then(res => res.json())
     .then(res => {
         merchList = res;
@@ -45,9 +47,10 @@ fetch("https://fakestoreapi.com/products?limit=5")
             `;
         });
         merchItemList = [...document.getElementsByClassName("illus-item")];
-        sizeList = Array(5).fill(null)
     })
     .catch(error => new Notification(`Failed to fetch merch info.\nError: ${error}`));
+
+sizeInputElementsList.forEach((sizeRadioElement, index) => sizeRadioElement.onchange = () => sizeList[activeProductIndex] = sizeRadioElement.value);
 
 class Notification {
     constructor(message, expTime = 3) {
@@ -134,11 +137,16 @@ const handleSubmit = (event) => {
 
     const sizeElement = sizeInputElementsList.filter((element) => element.checked)[0];
     sizeInputElementsListContainer.classList.remove("input-empty");
-    if (sizeElement === undefined) {
+    // if (sizeElement === undefined) {
+    //     failure = true;
+    //     sizeInputElementsListContainer.classList.add("input-empty");
+    // }
+    // else response.size = sizeElement.value;
+    if (sizeList.filter((size) => size).length === 0) {
         failure = true;
         sizeInputElementsListContainer.classList.add("input-empty");
     }
-    else response.size = sizeElement.value;
+    else response.size = sizeList.toString();
 
     agreeTnCInputContainer.classList.remove("input-empty");
     if (!agreeTnCInput.checked) {
@@ -162,7 +170,10 @@ const handleSubmit = (event) => {
     for (key in response) bakeCookie(key, response[key]);
 }
 
-const resetForm = (event) => [...inputContainersList].forEach((element) => element.classList.remove("input-error", "input-empty"));
+const resetForm = (event) => {
+    [...inputContainersList].forEach((element) => element.classList.remove("input-error", "input-empty"));
+    for (let i = 0; i < sizeList.length; i++) sizeList[i] = null;
+}
 
 const rehydrateForm = () => {
     const name = tasteCookie("name");
@@ -180,8 +191,8 @@ const rehydrateForm = () => {
     const hostel = tasteCookie("hostel");
     if (hostel !== null) hostelInputElement.value = hostel;
 
-    const size = tasteCookie("size");
-    if (size !== null) sizeInputElementsList.filter((sizeRadioElement) => sizeRadioElement.value)[0].checked = true;
+    sizeList = tasteCookie("size").split(",").map((size) => size === '' ? null : size);
+    if (sizeList[activeProductIndex] !== null) sizeInputElementsList.filter((sizeRadioElement) => (sizeRadioElement.value == sizeList[activeProductIndex]))[0].checked = true;
 }
 rehydrateForm();
 
@@ -199,6 +210,9 @@ const navMerchSlider = (direction) => {
     activeProductIndex += direction;
     if (activeProductIndex == merchList.length) activeProductIndex = 0;
     else if (activeProductIndex < 0) activeProductIndex = merchList.length - 1;
-    console.log(activeProductIndex, direction)
+    
+    if (sizeList[activeProductIndex]) sizeInputElementsList.filter((sizeRadioElement) => sizeRadioElement.value === sizeList[activeProductIndex])[0].checked = true;
+    else sizeInputElementsList.forEach((sizeRadioElement) => sizeRadioElement.checked = false);
+
     rearrangeMerchItems();
 }
