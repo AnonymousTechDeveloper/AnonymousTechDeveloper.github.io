@@ -327,6 +327,7 @@ fieldset {
     text-overflow: ellipsis;
     overflow-x: hidden;
     white-space: nowrap;
+    margin-bottom: 0px;
 }
 
 @media (max-width: 750px) {

@@ -43,6 +43,7 @@ fetch(`https://fakestoreapi.com/products?limit=${productLimit}`)
                             <div class="illus-item ${index ? 'item-right' : 'active-item'}">
                                 <img class="illus-img" src="${merch.image}">
                                 <p class="illus-desc">${merch.title}</p>
+                                <p class="illus-desc">${merch.price}</p>
                             </div>
             `;
         });
@@ -191,7 +192,8 @@ const rehydrateForm = () => {
     const hostel = tasteCookie("hostel");
     if (hostel !== null) hostelInputElement.value = hostel;
 
-    sizeList = tasteCookie("size").split(",").map((size) => size === '' ? null : size);
+    const sizeListString = tasteCookie("size");
+    if (sizeListString !== null) sizeList.split(",").map((size) => size === '' ? null : size);
     if (sizeList[activeProductIndex] !== null) sizeInputElementsList.filter((sizeRadioElement) => (sizeRadioElement.value == sizeList[activeProductIndex]))[0].checked = true;
 }
 rehydrateForm();
