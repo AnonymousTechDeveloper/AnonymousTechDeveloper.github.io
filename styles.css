@@ -318,7 +318,7 @@ fieldset {
     border-radius: 9px;
 }
 
-.illus-desc {
+.illus-desc, .illus-price {
     color: #e1e1e1;
     max-width: 150px;
     font-family: var(--primary-font);
@@ -327,8 +327,9 @@ fieldset {
     text-overflow: ellipsis;
     overflow-x: hidden;
     white-space: nowrap;
-    margin-bottom: 0px;
 }
+.illus-desc {margin-bottom: 0px;}
+.illus-price {margin-top: 0px;}
 
 @media (max-width: 750px) {
     body, html {overflow-y: auto;}

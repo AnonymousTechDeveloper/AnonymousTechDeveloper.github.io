@@ -43,7 +43,7 @@ fetch(`https://fakestoreapi.com/products?limit=${productLimit}`)
                             <div class="illus-item ${index ? 'item-right' : 'active-item'}">
                                 <img class="illus-img" src="${merch.image}">
                                 <p class="illus-desc">${merch.title}</p>
-                                <p class="illus-desc">${merch.price}</p>
+                                <p class="illus-price">Rs. ${parseInt(merch.price*86.57)}</p>
                             </div>
             `;
         });
