@@ -193,7 +193,7 @@ const rehydrateForm = () => {
     if (hostel !== null) hostelInputElement.value = hostel;
 
     const sizeListString = tasteCookie("size");
-    if (sizeListString !== null) sizeList.split(",").map((size) => size === '' ? null : size);
+    if (sizeListString !== null) sizeList = sizeListString.split(",").map((size) => size === '' ? null : size);
     if (sizeList[activeProductIndex] !== null) sizeInputElementsList.filter((sizeRadioElement) => (sizeRadioElement.value == sizeList[activeProductIndex]))[0].checked = true;
 }
 rehydrateForm();
