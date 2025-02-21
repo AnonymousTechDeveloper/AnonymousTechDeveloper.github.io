@@ -18,7 +18,7 @@ const agreeTnCInputContainer = document.getElementById("form-input-agreetnc-cont
 
 const emailPattern = /f\d{8}@(pilani|hyderabad|goa)\.bits-pilani\.ac\.in/i;
 const numberPattern = /\d{10}/;
-const bitsIdPattern = /\d{4}(A|B)\d[a-z]{2}\d{4}[a-z]/i;
+const bitsIdPattern = /\d{4}(A|B)(A|B|\d)[a-z]{2}\d{4}[a-z]/i;
 
 const notificationContainer = document.getElementById("notification-container");
 const merchDisplayContainer = document.getElementById("illus-container");
